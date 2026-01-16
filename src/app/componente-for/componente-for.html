@@ -1,0 +1,12 @@
+<div class="my-3">
+    <h2 class="text-info text-center">Lista de tareas</h2>
+    <ul class="list-group w-50 mx-auto">
+        @for(tarea of tareas(); track tarea){
+            <li class="list-group-item text-center">{{tarea}}</li>
+        }
+    </ul>
+</div>
+<div class="my-3 d-flex justify-content-center flex-column">
+    <input type="text" class="form-control w-50 mx-auto mt-3" placeholder="Agregar tarea" #tareaInput />
+    <button class="btn btn-primary w-50 mx-auto mt-3" (click)="agregarTarea(tareaInput.value); tareaInput.value='';">Agregar</button>
+</div>

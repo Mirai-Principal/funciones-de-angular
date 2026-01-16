@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center mt-3">
+    <input type="button" class="btn btn-primary me-2" value="Mostrar Mensaje" (click)="mostrarMensaje()">
+    <button class="btn btn-danger" (click)="resetMensaje()">Reset Mensaje</button>
+</div>
+
+<div class="alert alert-info mt-4 mx-auto w-50" role="alert">
+    <h4 class="alert-heading">Mensaje</h4>
+    <p>{{ mensaje() }}</p>
+</div>

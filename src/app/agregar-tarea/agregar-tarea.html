@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center flex-column text-center">
+    <div class="my-4 w-50 mx-auto">
+        <input type="text" class="form-control" placeholder="Agregar tarea" #tareaInput>
+        <button class="btn btn-primary" (click)="agregarTarea(tareaInput.value); tareaInput.value = '';">Agregar
+            tarea</button>
+    </div>
+    <div class="my-3 w-50 mx-auto">
+        <div class="alert alert-primary">
+            @if (tarea()) {
+            <p>La tarea es: {{ tarea() }}</p>
+            } @else {
+            <p>No hay tareas</p>
+            }
+        </div>
+    </div>
+</div>
