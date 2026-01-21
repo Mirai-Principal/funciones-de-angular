@@ -28,12 +28,12 @@ import { ComponenteFor } from "./componente-for/componente-for";
     ComponenteIf,
     AgregarTarea,
     ComponenteFor
-], //importa el router outlet para que el componente se pueda usar en el router
+  ], //importa el router outlet para que el componente se pueda usar en el router
   templateUrl: './app.html', //indica el archivo html que se va a usar para el componente
   styleUrl: './app.css', //indica el archivo css que se va a usar para el componente
 })
 export class App {
-  protected readonly title = signal('Directiva @for en angular'); //indica el titulo que se va a usar para el componente
+  protected readonly title = signal('Decorador @Input en angular'); //indica el titulo que se va a usar para el componente
 
   protected readonly contador = signal(0);
 

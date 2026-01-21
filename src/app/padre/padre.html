@@ -1,3 +1,2 @@
-<p>padre works!</p>
-
-<app-hijo />
+<p>Componente Padre</p>
+<app-hijo [mensaje]="mensajePadre()" (mensajeHijo)="mensajeHijo($event)" />
