@@ -12,8 +12,8 @@ export class Padre {
   protected readonly mensajePadre = signal<string>("hola hijo desde padre");
 
   //recibo datos del hijo
-  mensajeHijo($event: string) {
-    console.log($event);
-    alert($event);
+  protected readonly mensaje = signal<string>("");
+  mensajeHijo(mensajeHijo: string) {
+    this.mensaje.set(mensajeHijo);
   }
 }

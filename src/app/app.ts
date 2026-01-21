@@ -33,7 +33,7 @@ import { ComponenteFor } from "./componente-for/componente-for";
   styleUrl: './app.css', //indica el archivo css que se va a usar para el componente
 })
 export class App {
-  protected readonly title = signal('Decorador @Input en angular'); //indica el titulo que se va a usar para el componente
+  protected readonly title = signal('Decorador @Input @Output en angular'); //indica el titulo que se va a usar para el componente
 
   protected readonly contador = signal(0);
 

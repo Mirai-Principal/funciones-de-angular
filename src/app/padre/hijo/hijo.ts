@@ -15,6 +15,7 @@ export class Hijo {
   //envio datos al padre en un evento
   @Output() mensajeHijo = new EventEmitter<string>();
 
+  //emite el evento con el mensaje
   enviarMensaje() {
     this.mensajeHijo.emit('hola padre desde hijo');
   }

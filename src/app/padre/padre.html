@@ -1,2 +1,5 @@
 <p>Componente Padre</p>
 <app-hijo [mensaje]="mensajePadre()" (mensajeHijo)="mensajeHijo($event)" />
+@if (mensaje()) {
+<p class="alert alert-warning w-50 mx-auto" role="alert">{{ mensaje() }}</p>
+}
