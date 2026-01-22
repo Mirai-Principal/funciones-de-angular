@@ -3,3 +3,6 @@
 @if (mensaje()) {
 <p class="alert alert-warning w-50 mx-auto" role="alert">{{ mensaje() }}</p>
 }
+<br>
+<!-- usando ViewChild para acceder al hijo desde el padre -->
+<button class="btn btn-primary" (click)="cambiarMensajeHijo()">Enviar Mensaje al Hijo</button>

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -18,5 +18,11 @@ export class Hijo {
   //emite el evento con el mensaje
   enviarMensaje() {
     this.mensajeHijo.emit('hola padre desde hijo');
+  }
+
+  //usando ViewChild para acceder al hijo desde el padre
+  mensaje2: string = "mensaje desde el hijo";
+  cambiarMensaje(nuevoMensaje: string) {
+    this.mensaje2 = nuevoMensaje;
   }
 }

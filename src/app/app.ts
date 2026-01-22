@@ -17,7 +17,8 @@ import { ViewChildComponent } from "./view-child/view-child";
   selector: 'app-root', //indica el selector que se va a usar para el componente
   standalone: true, //indica que el componente es standalone y no necesita ser importado en el app.module.ts
   imports: [
-    ViewChildComponent
+    ViewChildComponent,
+    Padre
   ], //importa el router outlet para que el componente se pueda usar en el router
   templateUrl: './app.html', //indica el archivo html que se va a usar para el componente
   styleUrl: './app.css', //indica el archivo css que se va a usar para el componente
