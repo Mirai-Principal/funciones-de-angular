@@ -4,6 +4,7 @@ import { AsyncPipe, NgFor } from '@angular/common';
 import { Observable } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 
+
 interface Usuario {
   id: number;
   name: string;
