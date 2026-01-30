@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/']">Angular App</a>
+        <!--boton para mostrar el menu en dispositivos moviles-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacion"
+            aria-controls="navegacion" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--elementos del menu-->
+        <div class="collapse navbar-collapse" id="navegacion">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <a class="nav nav-link" [routerLink]="['/']" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}" aria-current="page">Inicio</a>
+                <a class="nav-link" [routerLink]="['/mostrar-mensaje', 'nuevo mensaje']" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}" aria-current="page">Mostrar Mensaje</a>
+            </div>
+        </div>
+    </div>
+</nav>
