@@ -1,12 +1,9 @@
 import { Component, computed, effect, LOCALE_ID, signal } from '@angular/core';
 import { Mensaje } from "./services/mensaje";
-import { registerLocaleData } from '@angular/common';
-import localeEs from '@angular/common/locales/es';
 import { RouterOutlet } from "@angular/router";
 import { Navegacion } from "./navegacion/navegacion";
 
-//registramos los datos de localizacion para espaniol
-registerLocaleData(localeEs, 'es');
+
 
 @Component({
   selector: 'app-root', //indica el selector que se va a usar para el componente
@@ -15,7 +12,6 @@ registerLocaleData(localeEs, 'es');
     RouterOutlet,
     Navegacion
   ], //importa el router outlet para que el componente se pueda usar en el router
-  providers: [{ provide: LOCALE_ID, useValue: 'es' }], //registramos el proveedor de localizacion
   templateUrl: './app.html', //indica el archivo html que se va a usar para el componente
   styleUrl: './app.css', //indica el archivo css que se va a usar para el componente
 })

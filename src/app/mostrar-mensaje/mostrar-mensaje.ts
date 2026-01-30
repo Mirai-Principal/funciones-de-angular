@@ -15,25 +15,7 @@ export class MostrarMensaje {
   protected readonly mensajeParametro = input<string>('');
   protected readonly _mensajeParametro = signal<string>('');
 
-  //son signals el tipo de autoinfiere
-  protected readonly mensaje!: Signal<string>;
-  protected readonly _mensaje = signal<string>('');
-
-  constructor(private route: ActivatedRoute) {
-
-    //reactivo
-    // Si el valor viene de fuera (Observable, Router, HTTP) → el Signal es de solo lectura
-    // Angular te protege para que no rompas la fuente original.
-    this.mensaje = toSignal(
-      this.route.queryParams.pipe(
-        map(params => params['mensaje'] || '')
-      ),
-      { initialValue: '' }
-    );
-
-    //esto solo si es necesario manipular el valor de la fuente original
-    this._mensaje.set(this.mensaje())
-  }
+  //protected readonly mensaje!: Signal<string>;
 
   ngOnInit(): void {
     this._mensajeParametro.set(this.mensajeParametro())
